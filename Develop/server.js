@@ -15,6 +15,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+mongoose.Promise = global.Promise
+
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://blakshep:Fieldy23!@ds047612.mlab.com:47612/heroku_3rkbqnls", {
 
