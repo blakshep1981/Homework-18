@@ -7,8 +7,6 @@ const PORT = 3000;
 
 const app = express();
 
-var MONGODB_URI = "mongodb://localhost/budget";
-
 app.use(logger("dev"));
 
 app.use(compression());
@@ -17,12 +15,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect("mongodb://blakshep:Fieldy23!@ds047612.mlab.com:47612/heroku_3rkbqnls", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
-
-mongoose.connect(MONGODB_URI);
 
 // routes
 app.use(require("./routes/api.js"));
