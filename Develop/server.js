@@ -7,7 +7,7 @@ const PORT = 3000;
 
 const app = express();
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
+// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budget";
 
 app.use(logger("dev"));
 
@@ -22,7 +22,7 @@ mongoose.connect("mongodb://localhost/budget", {
   useFindAndModify: false
 });
 
-mongoose.connect(MONGODB_URI);
+// mongoose.connect(MONGODB_URI);
 
 // routes
 app.use(require("./routes/api.js"));
